@@ -1,0 +1,33 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito sans";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-size: var(--font-size);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+svg {
+    width: 18px;
+    height: 18px;
+}
+
+html, body {
+    min-height: 100vh;
+    background: var(--color-light-background);
+}
