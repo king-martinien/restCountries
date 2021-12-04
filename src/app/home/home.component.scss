@@ -1,0 +1,119 @@
+#main {
+  min-height: 100vh;
+  padding: 40px 0;
+
+  .main-header {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .search-country {
+      border-radius: 4px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+      &.dark {
+        input {
+          color: var(--color-white) !important;
+        }
+      }
+
+      &-form {
+        height: 50px;
+        display: flex;
+
+        .entry {
+          display: flex;
+          align-items: stretch;
+          width: 100%;
+          padding-left: 10px;
+          gap: 2px;
+
+          input {
+            // background: var(--color-white);
+            padding: 0 16px;
+            width: 100%;
+            // &::placeholder {
+            //     color: var(--color-input-light);
+            // }
+          }
+
+          .search-btn {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &.dark {
+              svg path {
+                fill: var(--color-dark-elements) !important;
+                stroke: var(--color-white);
+              }
+            }
+            svg path {
+              stroke: var(--color-input-light);
+            }
+          }
+        }
+      }
+    }
+
+    .filter {
+      width: max-content;
+      display: flex;
+      flex-direction: column;
+        position: relative;
+      gap: 2px;
+
+      .filter-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        height: 50px;
+        padding: 0 18px;
+        border-radius: 4px;
+        margin-bottom: 5px;
+        font-weight: var(--font-bold);
+
+        &.dark {
+          svg path {
+            fill: var(--color-dark-elements) !important;
+          }
+        }
+      }
+
+      .filter-menu {
+        border-radius: 4px;
+        padding: 14px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        transform: translateY(-10px);
+        visibility: hidden;
+        opacity: 0;
+        transition: transform 0.1s ease-out, visibility 0.2s ease,
+          opacity 0.2s ease;
+
+          position: absolute;
+          left: 0;
+          top: 100%;
+          width: 100%;
+
+        &.menu-active {
+          transform: translateY(0);
+          visibility: visible;
+          opacity: 1;
+        }
+
+        &-item {
+          button {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            font-weight: var(--font-bold);
+          }
+        }
+      }
+    }
+  }
+}

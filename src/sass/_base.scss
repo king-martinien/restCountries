@@ -15,6 +15,7 @@ button {
     border: none;
     background: transparent;
     cursor: pointer;
+    color: inherit;
 }
 
 img {
@@ -22,12 +23,23 @@ img {
     height: auto;
 }
 
+input {
+    border: none;
+    background: transparent;
+    font-size: var(--font-size);
+}
+
 svg {
     width: 18px;
     height: 18px;
+    fill: var(--color-text-light);
+}
+
+ul {
+    list-style-type: none;
 }
 
 html, body {
     min-height: 100vh;
-    background: var(--color-light-background);
+    // background: var(--color-light-background);
 }

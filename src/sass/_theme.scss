@@ -1,0 +1,28 @@
+.light {
+  background: var(--color-white);
+  color: var(--color-text-light);
+  transition: all 0.2s ease;
+
+  &.bg {
+      background: var(--color-light-background);
+  }
+}
+
+.dark {
+  background: var(--color-dark-elements);
+  color: var(--color-white);
+  transition: all 0.2s ease;
+
+  &::placeholder {
+    color: var(--color-white);
+  }
+
+  &.bg {
+    background: var(--color-dark-background);
+  }
+
+  svg path {
+    fill: var(--color-white);
+    stroke: var(--color-white);
+  }
+}

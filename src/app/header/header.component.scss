@@ -1,27 +1,11 @@
 header {
-  // border: 1px solid red;
   height: 75px;
   box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
-
-  &.light {
-    background: var(--color-white);
-    color: var(--color-text-light);
-    transition: all 0.3s ease;
-  }
-
-  &.dark {
-    background: var(--color-dark-elements);
-    color: var(--color-white);
-    transition: all 0.3s ease;
-
-    svg path {
-      fill: var(--color-white);
-      stroke: var(--color-white);
-    }
-  }
+  position: sticky;
+  top: 0;
 
   .header-container {
     display: flex;
