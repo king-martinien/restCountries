@@ -1,1 +1,27 @@
-<p>country works!</p>
+<div [class]="{ country: true, skeleton: skeleton }">
+  <div class="country-img">
+    <ng-container *ngIf="!skeleton">
+      <img [src]="country?.flags?.svg" [alt]="country?.name?.common" />
+    </ng-container>
+  </div>
+
+  <div class="country-infos light">
+    <a
+      [routerLink]="['/country', country?.name?.common]"
+      class="country-name"
+      >{{ country?.name?.common }}</a
+    >
+    <div class="country-population">
+      <span *ngIf="country" class="label">Population: </span>
+      <span>{{ country?.population }}</span>
+    </div>
+    <div class="country-region">
+      <span *ngIf="country" class="label">Region: </span>
+      <span>{{ country?.region }}</span>
+    </div>
+    <div class="country-capital">
+      <span *ngIf="country" class="label">Capital: </span>
+      <span>{{ country?.capital }}</span>
+    </div>
+  </div>
+</div>

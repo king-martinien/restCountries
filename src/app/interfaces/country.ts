@@ -23,7 +23,7 @@ export interface Country {
   demonyms?: Demonyms;
   flag?: string;
   maps: Maps;
-  population: number;
+  population: number | string;
   gini?: { [key: string]: number };
   fifa?: string;
   car: Car;

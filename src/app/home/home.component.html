@@ -1,6 +1,5 @@
 <main id="main" class="light bg">
   <div class="container">
-
     <!-- Header Home -->
     <div class="main-header">
       <div class="search-country light">
@@ -41,7 +40,7 @@
 
       <div class="filter">
         <button class="filter-btn light" (click)="activeFilterMenu($event)">
-          <span>Filter by region</span>
+          <span>Filter by Region</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="ionicon"
@@ -69,7 +68,21 @@
 
     <!-- Content Countries -->
     <div class="content">
-      
+      <!-- Skeleton Countries -->
+      <ng-container *ngIf="!countries.length">
+        <div class="content-countries">
+          <ng-container *ngFor="let countrySkeleton of countriesSkeleton">
+            <app-country [skeleton]="'skeleton'"></app-country>
+          </ng-container>
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="countries.length">
+        <div class="content-countries">
+          <app-country *ngFor="let country of countries" [country]="country">
+          </app-country>
+        </div>
+      </ng-container>
     </div>
   </div>
 </main>

@@ -21,6 +21,7 @@ button {
 img {
     width: 100%;
     height: auto;
+    object-fit: cover;
 }
 
 input {
@@ -41,5 +42,6 @@ ul {
 
 html, body {
     min-height: 100vh;
+    scroll-behavior: smooth;
     // background: var(--color-light-background);
 }

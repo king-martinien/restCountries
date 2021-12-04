@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { CountryDetailComponent } from './country-detail/country-detail.component';
 import { CountryComponent } from './country/country.component';
 import { HomeComponent } from './home/home.component';
+import { BackToTopComponent } from './back-to-top/back-to-top.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HomeComponent } from './home/home.component';
     HeaderComponent,
     CountryDetailComponent,
     CountryComponent,
-    HomeComponent
+    HomeComponent,
+    BackToTopComponent
   ],
   imports: [
     BrowserModule,
